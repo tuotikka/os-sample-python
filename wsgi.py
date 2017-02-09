@@ -10,7 +10,7 @@ def hello():
     except gaierror:
       abc = "Address not found"
     except:
-      abc = "General Error"
+      abc = "General Error 1"
 
     return abc
 
