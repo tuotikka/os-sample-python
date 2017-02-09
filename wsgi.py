@@ -6,7 +6,7 @@ application = Flask(__name__)
 @application.route("/")
 def hello():
     try:
-      abc = gethostbyname('12345678.lev.iot.ilab.cloud')
+      abc = gethostbyname('1234.lev.iot.ilab.cloud')
     except gaierror:
       abc = "Address not found"
     except e:
