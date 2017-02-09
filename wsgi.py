@@ -1,5 +1,5 @@
 from flask import Flask
-import socket
+from socket import gethostbyname, gaierror
 
 application = Flask(__name__)
 
@@ -7,8 +7,11 @@ application = Flask(__name__)
 def hello():
     try:
       abc = socket.gethostbyname('12345678.lev.iot.ilab.cloud')
+    except gaierror:
+      abc = "Address not found"
     except:
-      abc = "ERROR"
+      abc = "General Error"
+
     return abc
 
 if __name__ == "__main__":
